@@ -1,5 +1,5 @@
 export const personalInfo = {
-  name: 'Joey Reiness',
+  name: 'Joey Reiness PhD',
   location: 'Leeds, United Kingdom',
   email: 'j.reiness@gmail.com',
   github: 'https://github.com/jyr20',
