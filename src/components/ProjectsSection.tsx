@@ -1,20 +1,23 @@
-import React from "react";
-import { projects } from "@/lib/data";
+import React from 'react'
+import { projects } from '@/lib/data'
 import {
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "./ui/card";
-import { Github } from "lucide-react";
-import { GlassCard } from "./ui/glass-card";
-import MotionWrapper from "./MotionWrapper";
-import { motion } from "framer-motion";
+} from './ui/card'
+import { Github } from 'lucide-react'
+import { GlassCard } from './ui/glass-card'
+import MotionWrapper from './MotionWrapper'
+import { motion } from 'framer-motion'
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-12 relative">
+    <section
+      id="projects"
+      className="py-12 from-muted/10 to-background relative scroll-mt-12"
+    >
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
           <h2 className="text-2xl font-bold mb-8 text-center md:text-left">
@@ -26,7 +29,7 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <MotionWrapper key={project.title} delay={index * 0.2}>
               <GlassCard className="group overflow-hidden dark:border-purple-500/10 h-full flex flex-col">
-                <CardHeader className="bg-gradient-to-r from-purple-500/5 to-pink-500/5">
+                <CardHeader className="mb-2 bg-gradient-to-r from-purple-500/5 to-pink-500/5">
                   <CardTitle className="text-center md:text-left group-hover:text-purple-500 transition-colors duration-300">
                     {project.title}
                   </CardTitle>
@@ -49,6 +52,16 @@ export default function ProjectsSection() {
                 </CardContent>
                 <CardFooter className="flex justify-center md:justify-start items-center border-t border-border/30 bg-gradient-to-r from-purple-500/5 to-pink-500/5">
                   <motion.a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex gap-2 mr-8 items-center text-sm text-muted-foreground hover:text-purple-500 transition-colors group/link pt-8 "
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <span>▶️</span>Demo
+                  </motion.a>
+                  <motion.a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -66,5 +79,5 @@ export default function ProjectsSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

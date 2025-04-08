@@ -1,14 +1,14 @@
-import { education } from "@/lib/data";
-import TimelineItem from "./TimelineItem";
-import { Award } from "lucide-react";
-import MotionWrapper from "./MotionWrapper";
-import { motion } from "framer-motion";
+import { education } from '@/lib/data'
+import TimelineItem from './TimelineItem'
+import { Award } from 'lucide-react'
+import MotionWrapper from './MotionWrapper'
+import { motion } from 'framer-motion'
 
 export default function EducationSection() {
   return (
     <section
       id="education"
-      className="py-12 bg-gradient-to-b from-muted/10 to-background"
+      className="py-12 bg-gradient-to-b from-background to-muted/20 scroll-mt-12"
     >
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
@@ -28,7 +28,7 @@ export default function EducationSection() {
               index={index}
             >
               <p className="text-sm text-muted-foreground mb-3">
-                📍 {edu.location}
+                🌍 {edu.location}
               </p>
 
               {edu.achievements && edu.achievements.length > 0 && (
@@ -68,5 +68,5 @@ export default function EducationSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

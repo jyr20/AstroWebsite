@@ -1,9 +1,9 @@
-import { personalInfo } from "@/lib/data";
-import { motion } from "framer-motion";
+import { personalInfo } from '@/lib/data'
+import { motion } from 'framer-motion'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-purple-500/10 py-6 bg-gradient-to-b from-background to-muted/20 backdrop-blur-sm">
+    <footer className="border-t border-purple-500/10 py-6 bg-gradient-to-b from-muted/10 to-background backdrop-blur-sm">
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <motion.div
           className="flex flex-col md:flex-row justify-between items-center"
@@ -16,8 +16,16 @@ export default function Footer() {
             className="text-sm text-muted-foreground text-center md:text-left"
             whileHover={{ scale: 1.01 }}
           >
-            &copy; {new Date().getFullYear()} {personalInfo.name}. All rights
-            reserved. ✨
+            Project forked from{' '}
+            <a
+              href="https://github.com/rishikesh2003/my-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-purple-500"
+            >
+              here
+            </a>
+            .
           </motion.p>
           <motion.p
             className="text-sm text-muted-foreground mt-2 md:mt-0 text-center md:text-left"
@@ -27,7 +35,7 @@ export default function Footer() {
             viewport={{ once: true }}
             whileHover={{ scale: 1.01 }}
           >
-            Built with{" "}
+            Built with{' '}
             <motion.span
               className="inline-block"
               initial={{ rotate: 0 }}
@@ -35,8 +43,8 @@ export default function Footer() {
               transition={{ duration: 0.5 }}
             >
               💻
-            </motion.span>{" "}
-            and{" "}
+            </motion.span>{' '}
+            and{' '}
             <motion.span
               className="inline-block"
               animate={{
@@ -44,7 +52,7 @@ export default function Footer() {
               }}
               transition={{
                 repeat: Infinity,
-                repeatType: "reverse",
+                repeatType: 'reverse',
                 duration: 1.5,
               }}
             >
@@ -54,5 +62,5 @@ export default function Footer() {
         </motion.div>
       </div>
     </footer>
-  );
+  )
 }

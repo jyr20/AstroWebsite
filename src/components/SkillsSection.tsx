@@ -1,8 +1,8 @@
-import React from "react";
-import { skills } from "@/lib/data";
-import { motion } from "framer-motion";
-import MotionWrapper from "./MotionWrapper";
-import { GlassCard } from "./ui/glass-card";
+import React from 'react'
+import { skills } from '@/lib/data'
+import { motion } from 'framer-motion'
+import MotionWrapper from './MotionWrapper'
+import { GlassCard } from './ui/glass-card'
 
 function SkillTag({ skill, index }: { skill: string; index: number }) {
   return (
@@ -10,7 +10,7 @@ function SkillTag({ skill, index }: { skill: string; index: number }) {
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{
-        type: "spring",
+        type: 'spring',
         stiffness: 260,
         damping: 20,
         delay: 0.05 * index,
@@ -20,7 +20,7 @@ function SkillTag({ skill, index }: { skill: string; index: number }) {
     >
       {skill}
     </motion.div>
-  );
+  )
 }
 
 const containerVariants = {
@@ -31,7 +31,7 @@ const containerVariants = {
       staggerChildren: 0.1,
     },
   },
-};
+}
 
 const skillCategoryVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -42,13 +42,13 @@ const skillCategoryVariants = {
       duration: 0.5,
     },
   },
-};
+}
 
 export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="py-12 bg-gradient-to-b from-background to-muted/20"
+      className="py-12 bg-gradient-to-b from-muted/20 to-background scroll-mt-12"
     >
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
@@ -62,7 +62,7 @@ export default function SkillsSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport={{ once: true, margin: '-50px' }}
         >
           <motion.div variants={skillCategoryVariants}>
             <GlassCard className="p-4">
@@ -134,8 +134,21 @@ export default function SkillsSection() {
               <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
                 <span className="mr-2 text-xl">🧰</span> Tools & Services
               </h3>
-              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+              <div className="flex flex-wrap gap-2 justify-start md:justify-start">
                 {skills.toolsAndServices.map((skill, index) => (
+                  <SkillTag key={skill} skill={skill} index={index} />
+                ))}
+              </div>
+            </GlassCard>
+          </motion.div>
+
+          <motion.div variants={skillCategoryVariants}>
+            <GlassCard className="p-4">
+              <h3 className="text-lg font-medium mb-3 text-center md:text-left flex items-center">
+                <span className="mr-2 text-xl">💬</span> Languages
+              </h3>
+              <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                {skills.languages.map((skill, index) => (
                   <SkillTag key={skill} skill={skill} index={index} />
                 ))}
               </div>
@@ -144,5 +157,5 @@ export default function SkillsSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

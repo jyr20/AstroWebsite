@@ -1,14 +1,14 @@
-import { workExperience } from "@/lib/data";
-import TimelineItem from "./TimelineItem";
-import { Briefcase } from "lucide-react";
-import { motion } from "framer-motion";
-import MotionWrapper from "./MotionWrapper";
+import { workExperience } from '@/lib/data'
+import TimelineItem from './TimelineItem'
+import { Briefcase } from 'lucide-react'
+import { motion } from 'framer-motion'
+import MotionWrapper from './MotionWrapper'
 
 export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="py-12 bg-gradient-to-b from-muted/20 to-background"
+      className="py-12 bg-gradient-to-b from-muted/20 to-background scroll-mt-12"
     >
       <div className="container max-w-4xl mx-auto px-6 md:px-4">
         <MotionWrapper>
@@ -21,7 +21,7 @@ export default function ExperienceSection() {
               viewport={{ once: true }}
             >
               💼
-            </motion.span>{" "}
+            </motion.span>{' '}
             Work Experience
           </h2>
         </MotionWrapper>
@@ -52,7 +52,7 @@ export default function ExperienceSection() {
                   {job.achievements.map((achievement, i) => (
                     <motion.li
                       key={i}
-                      className="text-muted-foreground relative pl-6"
+                      className="text-muted-foreground relative pl-4"
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.1 * i }}
@@ -68,5 +68,5 @@ export default function ExperienceSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
