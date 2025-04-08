@@ -127,7 +127,7 @@ export const projects = [
     description: [
       'In 2022, I jumped on the Wordle hype train and created Birdle, a game where players guess the names of UK birds based on a picture.',
       'This reached peak popularity of around 200 daily players. The web app tracks user scores over time and allows users to share their scores on social media.',
-      'Over two years later, I still occasionally here from players who are still enjoying the game.',
+      'Over two years later, I still occasionally hear from players who are still enjoying the game.',
       'I used this project to help my process of learning React, so it is a bit rough around the edges.',
     ],
   },
