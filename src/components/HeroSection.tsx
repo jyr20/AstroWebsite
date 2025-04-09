@@ -125,10 +125,10 @@ export default function HeroSection() {
               Physics, I sit at the intersection of science and technology,
               driving innovation in the AI paradigm shift. My analytical mindset
               and creative problem-solving skills enable me to break down
-              complex challenges into elegant, impactful solutions. Passionate
-              about team-building and leadership, I thrive in fast-paced
-              environments where I can deliver results and grow alongside my
-              peers.
+              complex challenges into elegant, impactful solutions. At Mathlabs,
+              a fast-moving AI startup, I play a hands-on role in shaping the
+              full technical pipeline—from development to high-level
+              decision-making.
             </p>
           </div>
         </MotionWrapper>
