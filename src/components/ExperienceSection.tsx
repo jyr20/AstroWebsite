@@ -10,7 +10,7 @@ export default function ExperienceSection() {
       id="experience"
       className="py-12 bg-gradient-to-b from-muted/20 to-background scroll-mt-12"
     >
-      <div className="container max-w-4xl mx-auto px-6 md:px-4">
+      <div className="container max-w-4xl mx-auto px-4 pr-6 md:px-4">
         <MotionWrapper>
           <h2 className="text-2xl font-bold mb-8 text-center md:text-left flex items-center md:inline-block">
             <motion.span
@@ -48,11 +48,11 @@ export default function ExperienceSection() {
                   </div>
                   <h4 className="text-sm font-medium">Key Achievements</h4>
                 </div>
-                <ul className="list-none ml-4 space-y-2 text-sm">
+                <ul className="list-none md:ml-4 space-y-2 text-sm">
                   {job.achievements.map((achievement, i) => (
                     <motion.li
                       key={i}
-                      className="text-muted-foreground relative pl-4"
+                      className="text-muted-foreground relative md:pl-4"
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.1 * i }}
