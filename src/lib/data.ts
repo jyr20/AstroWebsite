@@ -4,6 +4,7 @@ export const personalInfo = {
   email: 'j.reiness@gmail.com',
   github: 'https://github.com/jyr20',
   linkedin: 'https://www.linkedin.com/in/reinessjoey/',
+  education: 'University of Cambridge',
 }
 
 export const workExperience = [

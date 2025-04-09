@@ -1,5 +1,5 @@
 import { personalInfo } from '@/lib/data'
-import { Mail, Github, MapPin, Linkedin } from 'lucide-react'
+import { Mail, Github, MapPin, Linkedin, University } from 'lucide-react'
 import { motion } from 'framer-motion'
 import MotionWrapper from './MotionWrapper'
 
@@ -54,6 +54,14 @@ export default function HeroSection() {
               className="flex flex-col gap-2 items-center md:items-start"
               variants={containerVariants}
             >
+              <motion.div
+                className="flex items-center text-sm text-muted-foreground"
+                variants={childVariants}
+                whileHover={{ scale: 1.05, color: '#4b5563' }}
+              >
+                <University className="h-4 w-4 mr-2" />
+                🎓 {personalInfo.education}
+              </motion.div>
               <motion.div
                 className="flex items-center text-sm text-muted-foreground"
                 variants={childVariants}
