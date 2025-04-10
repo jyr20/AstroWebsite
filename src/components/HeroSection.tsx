@@ -130,12 +130,12 @@ export default function HeroSection() {
             <p className="text-muted-foreground pl-4 py-2 mb-4 relative">
               <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></span>
               🚀 As an AI Tech Lead and Senior Engineer with a PhD in Particle
-              Physics, I sit at the intersection of science and technology,
-              driving innovation in the AI paradigm shift. My analytical mindset
-              and creative problem-solving skills enable me to break down
-              complex challenges into elegant, impactful solutions. At Mathlabs,
-              a fast-moving AI startup, I play a hands-on role in shaping the
-              full technical pipeline—from development to high-level
+              Physics, I work at the intersection of science and technology to
+              drive innovation in the evolving landscape of AI. My analytical
+              mindset and creative problem-solving abilities allow me to address
+              complex challenges and deliver impactful solutions. At Mathlabs, a
+              fast-moving AI startup, I play a key role in shaping the full
+              technical pipeline—from hands-on development to strategic
               decision-making.
             </p>
           </div>
