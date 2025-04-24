@@ -122,6 +122,17 @@ export const skills = {
 
 export const projects = [
   {
+    title: 'Bin Day App & Bot',
+    github: 'https://github.com/jyr20/bin-day-app',
+    demo: 'https://bin-day-app.netlify.app/',
+    description: [
+      'The local council website requires lots of clicks and input to find out when your bin day is.',
+      'I created a web app that can be used as an iPhone shortcut to easily find out when the next bin day is, and which colour.',
+      'The web app is built with TS React and Tailwind CSS.',
+      'There is also Arduino code for the hardware version I made, which uses a 1-digit display and two different LEDs to show the next bin day and colour.',
+    ],
+  },
+  {
     title: 'Birdle',
     github: 'https://github.com/jyr20/Birdle',
     demo: 'https://www.birdlegame.com/',
